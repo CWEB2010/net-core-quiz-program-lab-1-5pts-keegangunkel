@@ -7,7 +7,7 @@ namespace GitActivityA
     {
         static void Main(string[] args)
         {
-            
+            Start:
             /* Sets up my main global variables to keep track of the User's score and answers */
             string[] correctAnswers =  { "B", "B", "C", "A", "D", "A", "A", "C", "D", "A" };
             string[] correctAnswersLower = { "b", "b", "c", "a", "d", "a", "a", "c", "d", "a" };
@@ -16,8 +16,7 @@ namespace GitActivityA
             int score = 0;
             int incorrectAnswers = 0;
             while (true)
-            {
-            Start:
+           {
                 /* Welcome text */
                 Console.WriteLine("\n.NET Core quiz.\nYou will have 10 questions to answer, all multiple choice.\n");
                 /*Question 1 with if else statements to add score and get answer (in lower or upper case) or add incorrect score and mark the question if wrong (this is repeated for every question)*/
@@ -196,48 +195,56 @@ namespace GitActivityA
 
                 if (score == 10)
                 {
-                    Console.WriteLine("Congrats, you passed!\n" + "Number of questions correct: " + score + "\nNumber of questions incorrect: " + incorrectAnswers + "\nThe questions you got wrong: none!");
+                    Console.WriteLine("Congrats, you aced it!\n" + "Number of questions correct: " + score + "\nNumber of questions incorrect: " + incorrectAnswers + "\nThe questions you got wrong: none!");
                 }
                 else if (score >= 7)
                 {
                     Console.WriteLine("Congrats, you passed!\n" + "Number of questions correct: " + score + "\nNumber of questions incorrect: " + incorrectAnswers);
                     Console.WriteLine("Questions you got wrong: ");
-                    // for each statement to print out each question answered wrong
-                    foreach (string i in questionsWrong)
-                    {
-                        Console.WriteLine(i);
-                    }
-                    Console.WriteLine("You answers: ");
-                    foreach (string j in wrongAnswers)
-                    {
-                        Console.WriteLine(j);
-                    }
+                // for each statement to print out each question answered wrong and what you answered
+                Console.ForegroundColor = ConsoleColor.Red;
+                foreach (string i in questionsWrong)
+                {
+                    Console.Write(i + "\t");
                 }
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nYour answers: ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                    foreach (string j in wrongAnswers)
+                {
+                    Console.Write(j + "\t");
+                }
+            }
                 else
                 {
                     Console.WriteLine("Sorry, you failed!!\n" + "Number of questions correct: " + score + "\nNumber of questions incorrect: " + incorrectAnswers);
                     Console.WriteLine("Questions you got wrong: ");
-                    // for each statement to print out each question answered wrong
+                // for each statement to print out each question answered wrong and what you answered
+                Console.ForegroundColor = ConsoleColor.Red;
                     foreach (string i in questionsWrong)
                     {
-                        Console.WriteLine(i);
+                        Console.Write(i + "\t");
                     }
-                    Console.WriteLine("Your answers: ");
-                    foreach (string j in wrongAnswers)
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nYour answers: ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                foreach (string j in wrongAnswers)
                     {
-                        Console.WriteLine(j);
+                        Console.Write(j + "\t");
                     }
                 }
+                Console.ForegroundColor = ConsoleColor.White;
                 // Decision logic for if the user wants to try again or not
                 Console.WriteLine("\nWould you like to take the quiz again? Y/N");
-                char yesOrNoDecision = (char)Console.Read();
-                if (yesOrNoDecision == 'Y' || yesOrNoDecision == 'y')
+                string yesOrNoDecision = Console.ReadLine();
+                if (yesOrNoDecision == "Y" || yesOrNoDecision == "y")
                 {
                     goto Start;
+                    
                 }
-                else if (yesOrNoDecision == 'N' || yesOrNoDecision == 'n')
+                else if (yesOrNoDecision == "N" || yesOrNoDecision == "n")
                 {
-                    break;
+                   break;
                 }
                 else
                 {
