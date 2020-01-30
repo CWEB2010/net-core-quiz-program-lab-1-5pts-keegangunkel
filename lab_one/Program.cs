@@ -23,174 +23,44 @@ namespace GitActivityA
                 Console.WriteLine("1.)Which open source platform is compatibile with .NET Core?\na.)Arduino\nb.)Xamarin\nc.)Solaris\nd.)Chrome OS\n");
                 string answer1 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[0] == answer1)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[0] == answer1)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("1");
-                    wrongAnswers.Add(answer1);
-                }
+                answersAndQuestions(correctAnswers[0], correctAnswersLower[0], answer1, wrongAnswers, questionsWrong, "1", score, incorrectAnswers);
                 Console.WriteLine("2.)Which cross-platform is supported by .Net Core?\nA.)WinForms\nB.)Universal Windows Platform\nC.)Windows Forms\nD.)NuGet\n");
                 string answer2 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[1] == answer2)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[1] == answer2)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("2");
-                    wrongAnswers.Add(answer2);
-                }
+                answersAndQuestions(correctAnswers[1], correctAnswersLower[1], answer2, wrongAnswers, questionsWrong, "2", score, incorrectAnswers);
 
                 Console.WriteLine("3.)What programming language does .Net Core fully support?\nA.)Python\nB.)Java\nC.)F#\nD.)Cobol\n");
                 string answer3 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[2] == answer3)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[2] == answer3)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("3");
-                    wrongAnswers.Add(answer3);
-                }
+                answersAndQuestions(correctAnswers[2], correctAnswersLower[2], answer3, wrongAnswers, questionsWrong, "3", score, incorrectAnswers);
                 Console.WriteLine("4.)What company made .NET Core?\na.)Microsoft\nb.)Apple\nc.)Google\nNone of the above\n");
                 string answer4 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[3] == answer4)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[3] == answer4)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("4");
-                    wrongAnswers.Add(answer4);
-                }
+                answersAndQuestions(correctAnswers[3], correctAnswersLower[3], answer4, wrongAnswers, questionsWrong, "4", score, incorrectAnswers);
                 Console.WriteLine("5.)Which operating system is supported by .NET Core?\nA.)Mac\nB.)Windows\nC.)Linux\nD.)All of the above\n");
                 string answer5 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[4] == answer5)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[4] == answer5)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("5");
-                    wrongAnswers.Add(answer5);
-                }
+                answersAndQuestions(correctAnswers[4], correctAnswersLower[4], answer5, wrongAnswers, questionsWrong, "5", score, incorrectAnswers);
                 Console.WriteLine("6.)Which open source license does .NET Core use?\na.)Apache 2\nb.)BSD 3-Clause\nc.)Mozilla Public License\nd.)Ecplise Public License\n");
                 string answer6 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[5] == answer6)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[5] == answer6)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("6");
-                    wrongAnswers.Add(answer6);
-                }
+                answersAndQuestions(correctAnswers[5], correctAnswersLower[5], answer6, wrongAnswers, questionsWrong, "6", score, incorrectAnswers);
                 Console.WriteLine("7.)What year did .NET Core come out?\na.)2016\nb.)1998\nc.)2006\nd.)1987\n");
                 string answer7 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[6] == answer7)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[6] == answer7)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("7");
-                    wrongAnswers.Add(answer7);
-                }
+                answersAndQuestions(correctAnswers[6], correctAnswersLower[6], answer7, wrongAnswers, questionsWrong, "7", score, incorrectAnswers);
                 Console.WriteLine("8.)Currently, how many versions of .NET Core have come out?\na.)3\nb.)9\nc.)7\nd.)12\n");
                 string answer8 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[7] == answer8)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[7] == answer8)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("8");
-                    wrongAnswers.Add(answer8);
-                }
+                answersAndQuestions(correctAnswers[7], correctAnswersLower[7], answer8, wrongAnswers, questionsWrong, "8", score, incorrectAnswers);
                 Console.WriteLine("9.)What are the main differences between .NET Core and .NET Framework\na.)APIs\nb.)Subsystems\nc.)Platforms\nd.)All of the above\n");
                 string answer9 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[8] == answer9)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[8] == answer9)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("9");
-                    wrongAnswers.Add(answer9);
-                }
+                answersAndQuestions(correctAnswers[8], correctAnswersLower[8], answer9, wrongAnswers, questionsWrong, "9", score, incorrectAnswers);
                 Console.WriteLine("10.)Which integrated learning environment(IDE)supports .NET Core?\na.)Visual Studio Code\nb.)Eclipse\nc.)Netbeans\nd.)intelliJ idea\n");
                 string answer10 = Console.ReadLine();
                 Console.WriteLine("");
-                if (correctAnswers[9] == answer10)
-                {
-                    score++;
-                }
-                else if (correctAnswersLower[9] == answer10)
-                {
-                    score++;
-                }
-                else
-                {
-                    incorrectAnswers++;
-                    questionsWrong.Add("10");
-                    wrongAnswers.Add(answer10);
-                }
+                answersAndQuestions(correctAnswers[9], correctAnswersLower[9], answer10, wrongAnswers, questionsWrong, "10", score, incorrectAnswers);
                 /* End if else statments to tell the user how many they got right and wrong and what questions they got wrong.*/
 
                 if (score == 10)
@@ -253,12 +123,30 @@ namespace GitActivityA
                 }
             }
             
+            
 
                 
 
             
 
 
+        }
+            public static void answersAndQuestions(string correctAnswersArray, string correctAnswersArrayLower, string answers, ArrayList wrongAnswersArray, ArrayList questionsWrongArray, string questionNum, int score, int incorrectScore )
+        {
+            if (correctAnswersArray == answers)
+            {
+                score++;
+            }
+            else if (correctAnswersArrayLower == answers)
+            {
+                score++;
+            }
+            else
+            {
+                incorrectScore++;
+                questionsWrongArray.Add(questionNum);
+                wrongAnswersArray.Add(answers);
+            }
         }
         }
 }
